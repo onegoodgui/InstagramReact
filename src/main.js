@@ -70,7 +70,7 @@ function Post(props){
         <div className="topo">
           <div className="usuario">
             <img src={props.userImage} />
-            meowed
+            {props.user}
           </div>
           <div className="acoes">
             <ion-icon name="ellipsis-horizontal"></ion-icon>
