@@ -22,19 +22,20 @@ function Usuario(props){
 }
 
 function Sugestoes(){
+
+    const sugestoes = [{username:'bad.vibes.memes', razao:'Segue você'},
+                       {username:'chibirdart', razao:'Segue você'},
+                       {username:'razoesparaacreditar', razao:'Novo no Instagram'},
+                       {username:'adorable_animals', razao:'Segue você'},
+                       {username:'smallcutecats', razao:'Segue você'}]
+                       
     return(
         <div className='sugestoes'>
             <div className="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-
-            <Sugestao username='bad.vibes.memes' razao='Segue você'/>
-            <Sugestao username='chibirdart' razao='Segue você'/>
-            <Sugestao username='razoesparaacreditar' razao='Novo no Instagram'/>
-            <Sugestao username='adorable_animals' razao='Segue você'/>
-            <Sugestao username='smallcutecats' razao='Segue você'/>
-
+            {sugestoes.map((sugestao)=>(<Sugestao username={sugestao.username} razao={sugestao.razao}/>))}
             <Links/>
             <Copyright/>
         </div>
