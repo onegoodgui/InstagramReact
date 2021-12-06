@@ -68,11 +68,14 @@ function Setinha(){
 }
 
 function Posts(){
+  let posts = [
+    {user:'barked', userImage:'assets/img/barked.svg', image:'assets/img/dog.svg', userCurtida:'adorable_animals', userCurtidaImg:'assets/img/adorable_animals.svg', nCurtidas:'99.159'},
+    {user:'meowed', userImage:'assets/img/meowed.svg', image:'assets/img/gato-telefone.svg', userCurtida:'respondeai', userCurtidaImg:'assets/img/respondeai.svg', nCurtidas:'101.523'}
+  ]
 
     return(
         <div className='posts'>
-            <Post user='barked' userImage='assets/img/barked.svg' image='assets/img/dog.svg' userCurtida='adorable_animals' userCurtidaImg='assets/img/adorable_animals.svg' nCurtidas = '99.159'/>
-            <Post user='meowed' userImage='assets/img/meowed.svg' image='assets/img/gato-telefone.svg' userCurtida='respondeai' userCurtidaImg='assets/img/respondeai.svg' nCurtidas ='101.523'/>
+          {posts.map((post) => (<Post user={post.user} userImage={post.userImage} image={post.image} userCurtida={post.userCurtida} userCurtidaImg={post.userCurtidaImg} nCurtidas={post.nCurtidas}/>))}
         </div>
     )
 }
