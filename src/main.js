@@ -15,16 +15,29 @@ export default function Corpo(){
 
 
 function Stories(){
+  let stories = 
+  [{url:'assets/img/9gag.svg',nome:'9gag'},
+   {url: 'assets/img/meowed.svg', nome: 'meowed'},
+   {url: 'assets/img/barked.svg', nome: 'barked'},
+   {url: 'assets/img/nathanwpylestrangeplanet.svg', nome: 'nathanwpylestrangeplanet'},
+   {url: 'assets/img/wawawicomics.svg', nome: 'wawawicomics'},
+   {url: 'assets/img/respondeai.svg', nome: 'respondeai'},
+   {url: 'assets/img/filomoderna.svg', nome:'filomoderna'},
+   {url: 'assets/img/memeriagourmet.svg', nome: 'memeriagourmet'}
+  ]
+
+
     return(
         <div className='stories'>
-            <Story url='assets/img/9gag.svg' nome='9gag'/>
+          {stories.map((story) => (<Story url={story.url} nome={story.nome} />))}
+            {/* <Story url='assets/img/9gag.svg' nome='9gag'/>
             <Story url='assets/img/meowed.svg' nome='meowed'/>
             <Story url='assets/img/barked.svg' nome='barked'/>
             <Story url='assets/img/nathanwpylestrangeplanet.svg' nome='nathanwpylestrangeplanet'/>
             <Story url='assets/img/wawawicomics.svg' nome='wawawicomics'/>
             <Story url='assets/img/respondeai.svg' nome='respondeai'/>
             <Story url='assets/img/filomoderna.svg' nome='filomoderna'/>
-            <Story url='assets/img/memeriagourmet.svg' nome='memeriagourmet'/>
+            <Story url='assets/img/memeriagourmet.svg' nome='memeriagourmet'/> */}
 
             <Setinha/>
             <Sidebar/>
@@ -55,10 +68,11 @@ function Setinha(){
 }
 
 function Posts(){
+
     return(
         <div className='posts'>
-            <Post user='meowed' userImage='assets/img/meowed.svg' image='assets/img/gato-telefone.svg' userCurtida='respondeai' userCurtidaImg='assets/img/respondeai.svg' nCurtidas ='101.523'/>
             <Post user='barked' userImage='assets/img/barked.svg' image='assets/img/dog.svg' userCurtida='adorable_animals' userCurtidaImg='assets/img/adorable_animals.svg' nCurtidas = '99.159'/>
+            <Post user='meowed' userImage='assets/img/meowed.svg' image='assets/img/gato-telefone.svg' userCurtida='respondeai' userCurtidaImg='assets/img/respondeai.svg' nCurtidas ='101.523'/>
         </div>
     )
 }
