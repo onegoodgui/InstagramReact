@@ -30,14 +30,6 @@ function Stories(){
     return(
         <div className='stories'>
           {stories.map((story) => (<Story url={story.url} nome={story.nome} />))}
-            {/* <Story url='assets/img/9gag.svg' nome='9gag'/>
-            <Story url='assets/img/meowed.svg' nome='meowed'/>
-            <Story url='assets/img/barked.svg' nome='barked'/>
-            <Story url='assets/img/nathanwpylestrangeplanet.svg' nome='nathanwpylestrangeplanet'/>
-            <Story url='assets/img/wawawicomics.svg' nome='wawawicomics'/>
-            <Story url='assets/img/respondeai.svg' nome='respondeai'/>
-            <Story url='assets/img/filomoderna.svg' nome='filomoderna'/>
-            <Story url='assets/img/memeriagourmet.svg' nome='memeriagourmet'/> */}
 
             <Setinha/>
             <Sidebar/>

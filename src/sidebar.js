@@ -1,7 +1,9 @@
 export default function Sidebar(){
+
+    const usuario = [{username:'catanacomics', name:'Catana'}]
  return(
      <div className='sidebar'>
-         <Usuario username='catanacomics' name='Catana'/>
+         {usuario.map((user)=>(<Usuario username={user.username} name={user.name} />))}
          <Sugestoes/>
      </div>
 
